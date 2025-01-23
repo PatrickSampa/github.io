@@ -46,7 +46,7 @@ export const DivAboutText = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 `;
 
 export const DivAboutTextTitle = styled.div`
@@ -77,6 +77,7 @@ export const DivAboutImageWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: red;
 `;
 
 export const TextAbout = styled.h2`

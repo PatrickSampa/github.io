@@ -125,6 +125,7 @@ export const Home = ({ setIsDarkModeActive }: HomeProps) => {
         <Styled.DivButtonAndConfig isVisible={isVisible}>
           <Styled.Link
             href="https://wa.me/5591982056718"
+            target="_blank"
             textDecoration="none"
             backgroundColor="transparent"
           >

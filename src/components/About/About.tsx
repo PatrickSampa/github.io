@@ -19,7 +19,7 @@ export const About = () => {
           </Styled.DivAboutTextTitle>
           <Styled.TextAboutDescription
             color="white"
-            fontSize="1.1rem"
+            fontSize="1rem"
             width="80%"
             lineHeight="25px"
             fontWeight="400"
@@ -31,7 +31,7 @@ export const About = () => {
           </Styled.TextAboutDescription>
           <Styled.TextAboutDescription
             color="white"
-            fontSize="1.1rem"
+            fontSize="1rem"
             width="80%"
             lineHeight="25px"
             fontWeight="400"
@@ -42,7 +42,7 @@ export const About = () => {
           </Styled.TextAboutDescription>
           <Styled.TextAboutDescription
             color="white"
-            fontSize="1.1rem"
+            fontSize="1rem"
             width="80%"
             lineHeight="25px"
             fontWeight="400"
