@@ -23,6 +23,7 @@ export const About = () => {
             width="80%"
             lineHeight="25px"
             fontWeight="400"
+            marginTop="0.5rem"
           >
             Hello! My name is Patrick. I am a web developer and digital visual
             artist. I love creating things that exist on the internet. My

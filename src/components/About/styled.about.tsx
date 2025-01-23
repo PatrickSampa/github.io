@@ -24,6 +24,7 @@ export type ParagraphProps = {
   opacityNumber?: string;
   transformNumber?: string;
   transitionDelayNumber?: string;
+  marginTop?: string;
 };
 
 export const AboutWrapper = styled.div`
@@ -36,7 +37,7 @@ export const AboutWrapper = styled.div`
 
 export const DivAbout = styled.div`
   width: 60%;
-  height: 60%;
+  height: 80%;
   margin-top: 10rem;
   display: flex;
 `;
@@ -46,7 +47,7 @@ export const DivAboutText = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
 `;
 
 export const DivAboutTextTitle = styled.div`
@@ -67,8 +68,9 @@ export const AboutTextLine = styled.p`
 
 export const DivAboutImage = styled.img`
   width: 60%;
-  height: 70%;
+  height: 55%;
   border-radius: 50%;
+  margin-bottom: 7rem;
 `;
 
 export const DivAboutImageWrapper = styled.div`
@@ -118,6 +120,7 @@ export const TextAboutDescription = styled.p<ParagraphProps>`
   flex-direction: ${({ flexDirection }) => flexDirection || ""};
   justify-content: ${({ justifyContent }) => justifyContent || ""};
   align-items: ${({ alignItems }) => alignItems || ""};
+  margin-top: ${({ marginTop }) => marginTop || ""};
 
   /* opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
   transition: opacity ${({ opacityNumber }) => opacityNumber} ease-in-out,
