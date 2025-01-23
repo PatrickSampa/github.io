@@ -77,7 +77,6 @@ export const DivAboutImageWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: red;
 `;
 
 export const TextAbout = styled.h2`
