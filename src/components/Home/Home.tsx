@@ -40,9 +40,9 @@ export const Home = ({ setIsDarkModeActive }: HomeProps) => {
       }
     }
     if (isDarkMode) {
-      setIsDarkModeActive((active) => !active);
+      setIsDarkModeActive(true);
     } else {
-      setIsDarkModeActive((active) => !active);
+      setIsDarkModeActive(false);
     }
   }, [isMuted, isDarkMode]);
 
