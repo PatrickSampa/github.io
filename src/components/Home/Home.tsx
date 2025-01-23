@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import * as Styled from "./styled.home";
 import { ThemeProvider } from "../../Global/Theme";
 import SettingsIcon from "@mui/icons-material/Settings";
@@ -8,7 +9,11 @@ import sun from "../../assets/sun.png";
 import moon from "../../assets/moon.png";
 import music from "../../music/preloader.mp3";
 
-export const Home = () => {
+type HomeProps = {
+  setIsDarkModeActive: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+export const Home = ({ setIsDarkModeActive }: HomeProps) => {
   const [isMuted, setIsMuted] = React.useState(true);
   const [isDarkMode, setIsDarkMode] = React.useState(true);
   const [rotategear, setRotategear] = React.useState(false);
@@ -34,7 +39,12 @@ export const Home = () => {
         audioRef.current.play();
       }
     }
-  }, [isMuted]);
+    if (isDarkMode) {
+      setIsDarkModeActive((active) => !active);
+    } else {
+      setIsDarkModeActive((active) => !active);
+    }
+  }, [isMuted, isDarkMode]);
 
   return (
     <Styled.HomeWrapper id="home-section">

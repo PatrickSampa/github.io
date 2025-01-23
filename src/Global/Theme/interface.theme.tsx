@@ -7,4 +7,8 @@ export interface ThemeProviderProps {
     quinary: string;
     senary: string;
   };
+  ThemeBackground: {
+    Dark: string;
+    Light: string;
+  };
 }

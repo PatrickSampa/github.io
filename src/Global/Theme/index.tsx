@@ -9,4 +9,8 @@ export const ThemeProvider: ThemeProviderProps = {
     quinary: "#6bc5f",
     senary: "#b0f3f1",
   },
+  ThemeBackground: {
+    Dark: "#0d1117",
+    Light: "#ece7e1",
+  },
 };
