@@ -126,3 +126,55 @@ export const TextAboutDescription = styled.p<ParagraphProps>`
   transform: ${({ isVisible }) =>
     isVisible ? "translateY(0)" : "translateY(100%)"}; */
 `;
+
+type ButtonUploadProps = {
+  backgroundColor?: string;
+  borderRadius?: string;
+  border?: string;
+  color?: string;
+  fontSize?: string;
+  fontWeight?: string;
+  padding?: string;
+  margin?: string;
+  cursor?: string;
+  hoverBackgroundColor?: string;
+};
+
+export const ButtonUpload = styled.button<ButtonUploadProps>`
+  width: 45px;
+  height: 40px;
+  background: linear-gradient(82.3deg, #965de9 10.8%, #6358ee 94.3%);
+  border-radius: ${({ borderRadius }) => borderRadius || ""};
+  border: ${({ border }) => border || ""};
+  color: ${({ color }) => color || ""};
+  font-size: ${({ fontSize }) => fontSize || ""};
+  font-weight: ${({ fontWeight }) => fontWeight || ""};
+  padding: ${({ padding }) => padding || ""};
+  margin: ${({ margin }) => margin || ""};
+  cursor: ${({ cursor }) => cursor || ""};
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.3s;
+  position: relative;
+  &:hover {
+    transform: scale(1.05);
+    width: 100px;
+    border-radius: 40px;
+    gap: 1rem;
+    span {
+      opacity: 1;
+      position: relative;
+    }
+  }
+`;
+
+export const ButtonUploadText = styled.span`
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: white;
+  opacity: 0;
+  transition-duration: 0.2s;
+  position: absolute;
+`;

@@ -1,7 +1,14 @@
 import * as Styled from "./styled.about";
 import patrick from "../../assets/patrick.jpeg";
+import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
+import pdf from "../../docs/CurrículoPatrick.pdf";
 
 export const About = () => {
+  const handleOpenPdf = () => {
+    const url = pdf;
+    window.open(url, "_blank");
+  };
+
   return (
     <Styled.AboutWrapper id="about-section">
       <Styled.DivAbout>
@@ -44,6 +51,17 @@ export const About = () => {
             apps, I like coding things from scratch and I like bringing ideas to
             life in the browser.
           </Styled.TextAboutDescription>
+          <Styled.ButtonUpload
+            border="none"
+            borderRadius="50%"
+            cursor="pointer"
+            onClick={handleOpenPdf}
+          >
+            <CloudDownloadIcon
+              style={{ width: "16px", height: "16px", color: "white" }}
+            />
+            <Styled.ButtonUploadText>Resume</Styled.ButtonUploadText>
+          </Styled.ButtonUpload>
         </Styled.DivAboutText>
         <Styled.DivAboutImageWrapper>
           <Styled.DivAboutImage src={patrick} />
