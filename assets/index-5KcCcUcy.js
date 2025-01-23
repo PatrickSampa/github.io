@@ -77,7 +77,6 @@ Error generating stack: `+a.message+`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: red;
 `,F0=xe.h2`
   font-size: 1.5rem;
   font-weight: bold;
