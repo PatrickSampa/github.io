@@ -69,7 +69,7 @@ Error generating stack: `+a.message+`
   margin-top: 0.5rem;
 `,D0=xe.img`
   width: 60%;
-  height: 60%;
+  height: 55%;
   border-radius: 50%;
   margin-bottom: 7rem;
 `,M0=xe.div`
