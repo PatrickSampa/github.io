@@ -42,20 +42,6 @@ const createColorChangeAnimation = (
   }
 `;
 
-export const Text = styled.h1<TextProps>`
-  font-size: ${({ fontSize }) => fontSize || ""};
-  font-weight: ${({ fontWeight }) => fontWeight || ""};
-  color: ${({ color }) => color || ""};
-  word-spacing: ${({ wordSpacing }) => wordSpacing || ""};
-  line-height: ${({ lineHeight }) => lineHeight || ""};
-
-  ${({ isKeyframes, keyframesColors }) =>
-    isKeyframes &&
-    css`
-      animation: ${createColorChangeAnimation(keyframesColors)} 3.5s infinite;
-    `}
-`;
-
 export const Paragraph = styled.p<ParagraphProps>`
   font-size: ${({ fontSize }) => fontSize || ""};
   font-weight: ${({ fontWeight }) => fontWeight || ""};
@@ -79,6 +65,13 @@ export const Paragraph = styled.p<ParagraphProps>`
   flex-direction: ${({ flexDirection }) => flexDirection || ""};
   justify-content: ${({ justifyContent }) => justifyContent || ""};
   align-items: ${({ alignItems }) => alignItems || ""};
+
+  opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
+  transition: opacity ${({ opacityNumber }) => opacityNumber} ease-in-out,
+    transform ${({ transformNumber }) => transformNumber} ease-in-out;
+  transition-delay: ${({ transitionDelayNumber }) => transitionDelayNumber};
+  transform: ${({ isVisible }) =>
+    isVisible ? "translateY(0)" : "translateY(100%)"};
 `;
 
 export const Button = styled.button<ButtonProps>`
@@ -204,7 +197,14 @@ export const Link = styled.a<LinkProps>`
   background-color: ${({ backgroundColor }) => backgroundColor || ""};
 `;
 
-export const DivButtonAndConfig = styled.div`
+type DivButtonAndConfigProps = {
+  isVisible?: boolean;
+  opacity?: number;
+  transition?: string;
+  transitionDelay?: string;
+};
+
+export const DivButtonAndConfig = styled.div<DivButtonAndConfigProps>`
   width: 100%;
   height: 100%;
   display: flex;
@@ -212,7 +212,32 @@ export const DivButtonAndConfig = styled.div`
   gap: 3rem;
   margin-top: 2rem;
   align-items: center;
-  position: relative;
+  opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  transition-delay: 1.4s;
+  transform: ${({ isVisible }) =>
+    isVisible ? "translateY(0)" : "translateY(100%)"};
+`;
+
+export const Text = styled.h1<TextProps>`
+  font-size: ${({ fontSize }) => fontSize || ""};
+  font-weight: ${({ fontWeight }) => fontWeight || ""};
+  color: ${({ color }) => color || ""};
+  word-spacing: ${({ wordSpacing }) => wordSpacing || ""};
+  line-height: ${({ lineHeight }) => lineHeight || ""};
+
+  ${({ isKeyframes, keyframesColors }) =>
+    isKeyframes &&
+    css`
+      animation: ${createColorChangeAnimation(keyframesColors)} 3.5s infinite;
+    `}
+
+  opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
+  transition: opacity ${({ opacityNumber }) => opacityNumber} ease-in-out,
+    transform ${({ transformNumber }) => transformNumber} ease-in-out;
+  transition-delay: ${({ transitionDelayNumber }) => transitionDelayNumber};
+  transform: ${({ isVisible }) =>
+    isVisible ? "translateY(0)" : "translateY(100%)"};
 `;
 
 export const ImageConfig = styled.img<ImageProps>`

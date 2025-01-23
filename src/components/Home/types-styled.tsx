@@ -6,6 +6,10 @@ export type TextProps = {
   lineHeight?: string;
   isKeyframes?: boolean;
   keyframesColors?: colorsKeyframes;
+  isVisible?: boolean;
+  opacityNumber?: string;
+  transformNumber?: string;
+  transitionDelayNumber?: string;
 };
 
 export type colorsKeyframes = {
@@ -35,6 +39,10 @@ export type ParagraphProps = {
   justifyContent?: string;
   alignItems?: string;
   backgroundColor?: string;
+  isVisible?: boolean;
+  opacityNumber?: string;
+  transformNumber?: string;
+  transitionDelayNumber?: string;
 };
 
 export type LinkProps = {

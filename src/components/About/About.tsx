@@ -1,5 +1,16 @@
-import { AboutWrapper } from "./styled.about";
+import * as Styled from "./styled.about";
 
 export const About = () => {
-  return <AboutWrapper id="about-section"></AboutWrapper>;
+  return (
+    <Styled.AboutWrapper id="about-section">
+      <Styled.DivAbout>
+        <Styled.DivAboutText>
+          <Styled.DivAboutTextTitle>
+            <Styled.TextAbout>{"<AboutMe/>"}</Styled.TextAbout>
+            <Styled.AboutTextLine />
+          </Styled.DivAboutTextTitle>
+        </Styled.DivAboutText>
+      </Styled.DivAbout>
+    </Styled.AboutWrapper>
+  );
 };

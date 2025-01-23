@@ -18,6 +18,7 @@ function App() {
         <ConfigComponents.Header />
         <ConfigComponents.Home setIsDarkModeActive={setIsDarkMode} />
         <ConfigComponents.About />
+        <ConfigComponents.Skills />
       </Wrapper>
     </>
   );

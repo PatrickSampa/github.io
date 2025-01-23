@@ -19,6 +19,7 @@ export const Home = ({ setIsDarkModeActive }: HomeProps) => {
   const [rotategear, setRotategear] = React.useState(false);
   const [rotateTheme, setRotateTheme] = React.useState(false);
   const [showButtons, setShowButtons] = React.useState(false);
+  const [isVisible, setIsVisible] = React.useState(false);
   const audioRef = React.useRef<HTMLAudioElement>(null);
 
   const toggleRotation = () => {
@@ -44,6 +45,7 @@ export const Home = ({ setIsDarkModeActive }: HomeProps) => {
     } else {
       setIsDarkModeActive(false);
     }
+    setIsVisible(true);
   }, [isMuted, isDarkMode]);
 
   return (
@@ -53,6 +55,10 @@ export const Home = ({ setIsDarkModeActive }: HomeProps) => {
       </audio>
       <Styled.Context>
         <Styled.Text
+          isVisible={isVisible}
+          opacityNumber="1s"
+          transformNumber="1s"
+          transitionDelayNumber="0.4s"
           fontSize="2.3rem"
           fontWeight="700"
           color={ThemeProvider.colors.primary}
@@ -61,6 +67,10 @@ export const Home = ({ setIsDarkModeActive }: HomeProps) => {
           {"Welcome(); I'm"}
         </Styled.Text>
         <Styled.Text
+          isVisible={isVisible}
+          opacityNumber="1s"
+          transformNumber="1s"
+          transitionDelayNumber="0.6s"
           fontSize="4rem"
           fontWeight="800"
           color={ThemeProvider.colors.secondary}
@@ -76,6 +86,10 @@ export const Home = ({ setIsDarkModeActive }: HomeProps) => {
           Patrick Sampaio
         </Styled.Text>
         <Styled.Text
+          isVisible={isVisible}
+          opacityNumber="1s"
+          transformNumber="1s"
+          transitionDelayNumber="0.8s"
           fontSize="4rem"
           fontWeight="700"
           color={ThemeProvider.colors.primary}
@@ -83,6 +97,10 @@ export const Home = ({ setIsDarkModeActive }: HomeProps) => {
           I am Full Stack Developer
         </Styled.Text>
         <Styled.Paragraph
+          isVisible={isVisible}
+          opacityNumber="1s"
+          transformNumber="1s"
+          transitionDelayNumber="1s"
           width="70%"
           fontSize="1.3rem"
           fontWeight="600"
@@ -92,6 +110,10 @@ export const Home = ({ setIsDarkModeActive }: HomeProps) => {
           Design. Passionate about fun UIs, collaboration, and product creation.
         </Styled.Paragraph>
         <Styled.Paragraph
+          isVisible={isVisible}
+          opacityNumber="1s"
+          transformNumber="1s"
+          transitionDelayNumber="1.2s"
           width="70%"
           fontSize="1.3rem"
           fontWeight="600"
@@ -100,7 +122,7 @@ export const Home = ({ setIsDarkModeActive }: HomeProps) => {
           I value simple content structures, clean design patterns, and
           thoughtful interactions.
         </Styled.Paragraph>
-        <Styled.DivButtonAndConfig>
+        <Styled.DivButtonAndConfig isVisible={isVisible}>
           <Styled.Link
             href="https://wa.me/5591982056718"
             textDecoration="none"
