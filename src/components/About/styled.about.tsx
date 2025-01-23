@@ -35,16 +35,18 @@ export const AboutWrapper = styled.div`
 `;
 
 export const DivAbout = styled.div`
-  width: 80%;
-  height: 80%;
+  width: 60%;
+  height: 60%;
   margin-top: 10rem;
+  display: flex;
 `;
 
 export const DivAboutText = styled.div`
-  width: 50%;
+  width: 60%;
   height: 100%;
   display: flex;
-  margin-left: 10rem;
+  flex-direction: column;
+  gap: 2rem;
 `;
 
 export const DivAboutTextTitle = styled.div`
@@ -63,10 +65,18 @@ export const AboutTextLine = styled.p`
   margin-top: 0.5rem;
 `;
 
-export const DivAboutImage = styled.div`
-  width: 50%;
+export const DivAboutImage = styled.img`
+  width: 60%;
+  height: 70%;
+  border-radius: 50%;
+`;
+
+export const DivAboutImageWrapper = styled.div`
+  width: 40%;
   height: 100%;
-  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const TextAbout = styled.h2`
@@ -109,10 +119,10 @@ export const TextAboutDescription = styled.p<ParagraphProps>`
   justify-content: ${({ justifyContent }) => justifyContent || ""};
   align-items: ${({ alignItems }) => alignItems || ""};
 
-  opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
+  /* opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
   transition: opacity ${({ opacityNumber }) => opacityNumber} ease-in-out,
     transform ${({ transformNumber }) => transformNumber} ease-in-out;
   transition-delay: ${({ transitionDelayNumber }) => transitionDelayNumber};
   transform: ${({ isVisible }) =>
-    isVisible ? "translateY(0)" : "translateY(100%)"};
+    isVisible ? "translateY(0)" : "translateY(100%)"}; */
 `;
