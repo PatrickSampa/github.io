@@ -28,7 +28,7 @@ export const HeaderContext = styled.div`
 `;
 
 export const MenuItens = styled.div`
-  height: 100%;
+  height: 80%;
   width: 80%;
   display: flex;
   justify-content: end;
@@ -45,7 +45,7 @@ export const MenuList = styled.ul`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 60%;
+  width: 40%;
 `;
 
 export const MenuItem = styled.li`
