@@ -3,26 +3,28 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   width: 100%;
   height: 8.5%;
-  background-color: transparent;
   margin-top: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
+  z-index: 999;
 `;
 
 export const HeaderContext = styled.div`
+  background-image: linear-gradient(
+    to bottom right,
+    #1a1a29,
+    rgba(27, 27, 40, 0)
+  );
+  backdrop-filter: blur(10px);
   width: 80%;
   height: 100%;
   border-radius: 35px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-image: linear-gradient(
-    to bottom right,
-    #1a1a29,
-    rgba(27, 27, 40, 0)
-  );
+  border: 1px solid #e2e2e207;
 `;
 
 export const MenuItens = styled.div`

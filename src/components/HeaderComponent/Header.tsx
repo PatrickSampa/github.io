@@ -15,7 +15,7 @@ export const Header = () => {
               <C.Link href="#about-section">{"<About />"}</C.Link>
             </C.MenuItem>
             <C.MenuItem>
-              <C.Link href="#skills">{"<Skills />"}</C.Link>
+              <C.Link href="#skills-section">{"<Skills />"}</C.Link>
             </C.MenuItem>
             <C.MenuItem>
               <C.Link href="#projects">{"<Projects />"}</C.Link>

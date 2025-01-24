@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export type ParagraphProps = {
   color?: string;
@@ -29,7 +29,7 @@ export type ParagraphProps = {
 
 export const AboutWrapper = styled.div`
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,14 +63,26 @@ export const AboutTextLine = styled.p`
   height: 1px;
   background-image: linear-gradient(90deg, #b0f3f1, #ffcfdf);
   display: flex;
-  margin-top: 0.5rem;
+  margin-top: 0.3rem;
+`;
+
+const slideUp = keyframes`
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 `;
 
 export const DivAboutImage = styled.img`
   width: 60%;
-  height: 55%;
+  height: 50%;
   border-radius: 50%;
   margin-bottom: 7rem;
+  animation: ${slideUp} 0.5s ease-out forwards;
 `;
 
 export const DivAboutImageWrapper = styled.div`
