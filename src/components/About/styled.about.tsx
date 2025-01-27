@@ -41,9 +41,18 @@ export const DivAbout = styled.div`
   height: 80%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
   margin-top: 3rem;
+
+  @media screen and (max-width: 1300px) {
+    width: 80%;
+    height: 80%;
+  }
+  @media screen and (max-width: 1000px) {
+    width: 90%;
+    height: 90%;
+    justify-content: center;
+  }
 `;
 
 export const DivAboutText = styled.div`
@@ -52,6 +61,10 @@ export const DivAboutText = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  @media screen and (max-width: 1000px) {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 export const DivAboutTextTitle = styled.div`
@@ -61,6 +74,16 @@ export const DivAboutTextTitle = styled.div`
   align-items: center;
   gap: 1rem;
   margin-top: 12rem;
+
+  @media screen and (max-width: 1300px) {
+    width: 80%;
+    height: 80%;
+  }
+
+  @media screen and (max-width: 1000px) {
+    width: 90%;
+    height: 90%;
+  }
 `;
 
 export const AboutTextLine = styled.p`
@@ -176,6 +199,10 @@ export const TextAboutDescription = styled.p<ParagraphProps>`
   transition-delay: ${({ transitionDelayNumber }) => transitionDelayNumber};
   transform: ${({ isVisible }) =>
     isVisible ? "translateY(0)" : "translateY(100%)"}; */
+
+  @media screen and (max-width: 1000px) {
+    width: 100%;
+  }
 `;
 
 type ButtonUploadProps = {

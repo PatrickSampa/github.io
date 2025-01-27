@@ -10,6 +10,7 @@ export type TextProps = {
   opacityNumber?: string;
   transformNumber?: string;
   transitionDelayNumber?: string;
+  fontSizeMobile?: string;
 };
 
 export type colorsKeyframes = {
@@ -58,6 +59,7 @@ export type LinkProps = {
   textDecorationStyle?: string;
   textDecorationThickness?: string;
   backgroundColor?: string;
+  paddingMobile?: string;
 };
 
 export type ButtonProps = {
@@ -106,6 +108,7 @@ export type ButtonProps = {
   marginRight?: string;
   marginTop?: string;
   marginBottom?: string;
+  paddingMobile?: string;
 };
 
 export type HoverProps = {

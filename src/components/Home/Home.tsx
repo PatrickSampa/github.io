@@ -63,6 +63,7 @@ export const Home = ({ setIsDarkModeActive }: HomeProps) => {
           fontWeight="700"
           color={ThemeProvider.colors.primary}
           wordSpacing="1rem"
+          fontSizeMobile="2.5rem"
         >
           {"Welcome(); I'm"}
         </Styled.Text>
@@ -82,6 +83,7 @@ export const Home = ({ setIsDarkModeActive }: HomeProps) => {
             colorSecondary: ThemeProvider.colors.quinary,
             colorQuaternary: ThemeProvider.colors.senary,
           }}
+          fontSizeMobile="2rem"
         >
           Patrick Sampaio
         </Styled.Text>
@@ -93,6 +95,7 @@ export const Home = ({ setIsDarkModeActive }: HomeProps) => {
           fontSize="4rem"
           fontWeight="700"
           color={ThemeProvider.colors.primary}
+          fontSizeMobile="2rem"
         >
           I am Full Stack Developer
         </Styled.Text>
@@ -133,6 +136,7 @@ export const Home = ({ setIsDarkModeActive }: HomeProps) => {
               backgroundImage="linear-gradient(150deg, #71cbff, #8000ff, transparent);"
               color="white"
               padding="15px 55px"
+              paddingMobile="15px 35px"
               border="none"
               borderRadius="10px"
               cursor="pointer"

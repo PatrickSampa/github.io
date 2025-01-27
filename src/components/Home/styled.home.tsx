@@ -24,6 +24,15 @@ export const Context = styled.div`
   flex-direction: column;
   gap: 1rem;
   margin-top: 10rem;
+  @media screen and (max-width: 1300px) {
+    width: 80%;
+    height: 80%;
+  }
+
+  @media screen and (max-width: 1000px) {
+    width: 90%;
+    height: 90%;
+  }
 `;
 
 const createColorChangeAnimation = (
@@ -73,6 +82,13 @@ export const Paragraph = styled.p<ParagraphProps>`
   transition-delay: ${({ transitionDelayNumber }) => transitionDelayNumber};
   transform: ${({ isVisible }) =>
     isVisible ? "translateY(0)" : "translateY(100%)"};
+
+  @media screen and (max-width: 1000px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 1rem;
+  }
 `;
 
 export const Button = styled.button<ButtonProps>`
@@ -113,6 +129,10 @@ export const Button = styled.button<ButtonProps>`
   top: ${({ top }) => top || ""};
   right: ${({ right }) => right || ""};
   bottom: ${({ bottom }) => bottom || ""};
+
+  @media screen and (max-width: 500px) {
+    padding: ${({ paddingMobile }) => paddingMobile || ""};
+  }
 
   ${({ isHover, hover }) =>
     isHover &&
@@ -203,6 +223,7 @@ type DivButtonAndConfigProps = {
   opacity?: number;
   transition?: string;
   transitionDelay?: string;
+  paddingMobile?: string;
 };
 
 export const DivButtonAndConfig = styled.div<DivButtonAndConfigProps>`
@@ -239,6 +260,10 @@ export const Text = styled.h1<TextProps>`
   transition-delay: ${({ transitionDelayNumber }) => transitionDelayNumber};
   transform: ${({ isVisible }) =>
     isVisible ? "translateY(0)" : "translateY(100%)"};
+
+  @media screen and (max-width: 600px) {
+    font-size: ${({ fontSizeMobile }) => fontSizeMobile || ""};
+  }
 `;
 
 export const ImageConfig = styled.img<ImageProps>`

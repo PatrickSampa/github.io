@@ -32,6 +32,16 @@ export const TextTitle = styled.h2`
   align-items: center;
   margin-top: 6rem;
   gap: 1rem;
+
+  @media screen and (max-width: 1300px) {
+    width: 80%;
+    height: 80%;
+  }
+
+  @media screen and (max-width: 1000px) {
+    width: 90%;
+    height: 90%;
+  }
 `;
 
 export const AboutTextLine = styled.p`
@@ -52,6 +62,14 @@ export const TeckListWrapper = styled.div`
   align-items: center;
   width: 60%;
   margin-bottom: 2rem;
+  @media screen and (max-width: 1300px) {
+    width: 80%;
+    height: 80%;
+  }
+
+  @media screen and (max-width: 500px) {
+    gap: 20px;
+  }
 `;
 
 //tecklist
@@ -75,6 +93,11 @@ export const TeckList = styled.div`
     span {
       opacity: 1;
     }
+  }
+
+  @media screen and (max-width: 380px) {
+    width: 120px;
+    height: 120px;
   }
 `;
 
