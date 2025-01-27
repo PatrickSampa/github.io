@@ -2,10 +2,11 @@ import styled from "styled-components";
 
 export const SkillsWrapper = styled.div`
   width: 100%;
-  height: calc(100vh);
+  height: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-top: 5rem;
 `;
 
 export const DivSkillsTitle = styled.div`
@@ -50,6 +51,7 @@ export const TeckListWrapper = styled.div`
   display: flex;
   align-items: center;
   width: 60%;
+  margin-bottom: 2rem;
 `;
 
 //tecklist

@@ -29,17 +29,21 @@ export type ParagraphProps = {
 
 export const AboutWrapper = styled.div`
   width: 100%;
-  height: 90vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 `;
 
 export const DivAbout = styled.div`
   width: 60%;
   height: 80%;
-  margin-top: 10rem;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
 `;
 
 export const DivAboutText = styled.div`
@@ -51,11 +55,12 @@ export const DivAboutText = styled.div`
 `;
 
 export const DivAboutTextTitle = styled.div`
-  width: 100%;
+  width: 60%;
   height: 10%;
   display: flex;
   align-items: center;
   gap: 1rem;
+  margin-top: 12rem;
 `;
 
 export const AboutTextLine = styled.p`
@@ -78,19 +83,50 @@ const slideUp = keyframes`
 `;
 
 export const DivAboutImage = styled.img`
-  width: 60%;
-  height: 50%;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
-  margin-bottom: 7rem;
   animation: ${slideUp} 0.5s ease-out forwards;
+  @media screen and (max-width: 2000px) {
+    height: 60%;
+  }
 `;
 
 export const DivAboutImageWrapper = styled.div`
-  width: 40%;
-  height: 100%;
+  width: 25%;
+  height: 25%;
   display: flex;
   justify-content: center;
   align-items: center;
+  /*   background-color: red; */
+  /*   @media screen and (max-width: 1400px) {
+    width: 40%;
+    height: 80%;
+  }
+
+  @media screen and (max-width: 1490px) {
+    width: 40%;
+    height: 70%;
+  }
+
+  @media screen and (max-width: 1670px) {
+    width: 60%;
+    height: 80%;
+  } */
+  @media screen and (max-width: 2000px) {
+    width: 30%;
+    height: 30%;
+  }
+
+  @media screen and (max-width: 1500px) {
+    width: 40%;
+    height: 40%;
+  }
+
+  @media screen and (max-width: 1000px) {
+    width: 50%;
+    height: 50%;
+  }
 `;
 
 export const TextAbout = styled.h2`

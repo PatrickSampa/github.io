@@ -11,12 +11,12 @@ export const About = () => {
 
   return (
     <Styled.AboutWrapper id="about-section">
+      <Styled.DivAboutTextTitle>
+        <Styled.TextAbout>{"<AboutMe/>"}</Styled.TextAbout>
+        <Styled.AboutTextLine />
+      </Styled.DivAboutTextTitle>
       <Styled.DivAbout>
         <Styled.DivAboutText>
-          <Styled.DivAboutTextTitle>
-            <Styled.TextAbout>{"<AboutMe/>"}</Styled.TextAbout>
-            <Styled.AboutTextLine />
-          </Styled.DivAboutTextTitle>
           <Styled.TextAboutDescription
             color="white"
             fontSize="1rem"
