@@ -543,6 +543,7 @@ export default theme;`}function Su(n={},...o){const{breakpoints:l,mixins:s={},sp
     gap: 0.8rem;
     flex-direction: column;
     margin-right: 2rem;
+    background-color: red;
   }
 `;se.button`
   @media (max-width: 1100px) {
