@@ -1,5 +1,6 @@
 import * as C from "./styled.header";
 import myAvatar from "../../assets/myAvatar.png";
+import useResponsive from "../../shared";
 
 type HeaderProps = {
   setIsOpen: (isOpen: boolean) => void;
@@ -7,10 +8,23 @@ type HeaderProps = {
 };
 
 export const Header = ({ setIsOpen, isOpen }: HeaderProps) => {
+  const { height } = useResponsive();
   return (
     <C.Wrapper>
       <C.HeaderContext isOpen={isOpen}>
-        <C.DivImg>
+        <C.DivImg
+          width={height < 750 ? (height < 580 ? "30px" : "50px") : "60px"}
+          height={
+            height < 750
+              ? height < 580
+                ? "30px"
+                : "50px"
+              : height < 580
+              ? "40px"
+              : "60px"
+          }
+          marginLeft={"3rem"}
+        >
           <C.MyAvatar src={myAvatar} alt="avatar" isOpen={isOpen} />
         </C.DivImg>
         <C.MenuItens>

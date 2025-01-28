@@ -8,6 +8,7 @@ import * as React from "react";
 import sun from "../../assets/sun.png";
 import moon from "../../assets/moon.png";
 import music from "../../music/preloader.mp3";
+import useResponsive from "../../shared";
 
 type HomeProps = {
   setIsDarkModeActive: React.Dispatch<React.SetStateAction<boolean>>;
@@ -27,6 +28,7 @@ export const Home = ({
   const [showButtons, setShowButtons] = React.useState(false);
   const [isVisible, setIsVisible] = React.useState(false);
   const audioRef = React.useRef<HTMLAudioElement>(null);
+  const { height } = useResponsive();
 
   const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
@@ -84,7 +86,11 @@ export const Home = ({
       <Styled.Context>
         <Styled.SlidingBackground isVisible={openMenu}>
           <Styled.MenuItens>
-            <Styled.MenuList display="flex" gap="10rem" flexDirection="column">
+            <Styled.MenuList
+              display="flex"
+              gap={height < 490 ? "5rem" : "10rem"}
+              flexDirection="column"
+            >
               <Styled.MenuItem>
                 <Styled.LinkOpenMenu
                   onClick={handleLinkClick}

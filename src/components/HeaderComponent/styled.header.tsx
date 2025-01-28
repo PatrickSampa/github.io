@@ -55,10 +55,16 @@ export const MyAvatar = styled.img<propsMyAvatar>`
       display: none;
     `}
 `;
-export const DivImg = styled.div`
-  width: 70px;
-  height: 60px;
-  margin-left: 3rem;
+
+type propsDivImg = {
+  width?: string;
+  height?: string;
+  marginLeft?: string;
+};
+export const DivImg = styled.div<propsDivImg>`
+  width: ${({ width }) => width || ""};
+  height: ${({ height }) => height || ""};
+  margin-left: ${({ marginLeft }) => marginLeft || ""};
 `;
 
 type props = {
