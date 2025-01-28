@@ -5,6 +5,7 @@ import * as React from "react";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = React.useState(true);
+  const [isOpen, setIsOpen] = React.useState(false);
 
   return (
     <>
@@ -15,8 +16,12 @@ function App() {
             : ThemeProvider.ThemeBackground.Light
         }
       >
-        <ConfigComponents.Header />
-        <ConfigComponents.Home setIsDarkModeActive={setIsDarkMode} />
+        <ConfigComponents.Header setIsOpen={setIsOpen} isOpen={isOpen} />
+        <ConfigComponents.Home
+          setIsDarkModeActive={setIsDarkMode}
+          openMenu={isOpen}
+          setOpenMenu={setIsOpen}
+        />
         <ConfigComponents.About />
         <ConfigComponents.Skills />
       </Wrapper>

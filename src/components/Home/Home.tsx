@@ -11,9 +11,15 @@ import music from "../../music/preloader.mp3";
 
 type HomeProps = {
   setIsDarkModeActive: React.Dispatch<React.SetStateAction<boolean>>;
+  openMenu: boolean;
+  setOpenMenu: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export const Home = ({ setIsDarkModeActive }: HomeProps) => {
+export const Home = ({
+  setIsDarkModeActive,
+  openMenu,
+  setOpenMenu,
+}: HomeProps) => {
   const [isMuted, setIsMuted] = React.useState(true);
   const [isDarkMode, setIsDarkMode] = React.useState(true);
   const [rotategear, setRotategear] = React.useState(false);
@@ -21,6 +27,28 @@ export const Home = ({ setIsDarkModeActive }: HomeProps) => {
   const [showButtons, setShowButtons] = React.useState(false);
   const [isVisible, setIsVisible] = React.useState(false);
   const audioRef = React.useRef<HTMLAudioElement>(null);
+
+  const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    const href = event.currentTarget.getAttribute("href");
+    setOpenMenu(false);
+    if (href === "#home-section") {
+      const section = document.getElementById("home-section");
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    } else if (href === "#about-section") {
+      const section = document.getElementById("about-section");
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    } else if (href === "#skills-section") {
+      const section = document.getElementById("skills-section");
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
 
   const toggleRotation = () => {
     setRotategear(!rotategear);
@@ -54,6 +82,36 @@ export const Home = ({ setIsDarkModeActive }: HomeProps) => {
         <source src={music} type="audio/mp3" />
       </audio>
       <Styled.Context>
+        <Styled.SlidingBackground isVisible={openMenu}>
+          <Styled.MenuItens>
+            <Styled.MenuList display="flex" gap="10rem" flexDirection="column">
+              <Styled.MenuItem>
+                <Styled.LinkOpenMenu
+                  onClick={handleLinkClick}
+                  href="#home-section"
+                >
+                  {"<Home />"}
+                </Styled.LinkOpenMenu>
+              </Styled.MenuItem>
+              <Styled.MenuItem>
+                <Styled.LinkOpenMenu
+                  href="#about-section"
+                  onClick={handleLinkClick}
+                >
+                  {"<About />"}
+                </Styled.LinkOpenMenu>
+              </Styled.MenuItem>
+              <Styled.MenuItem>
+                <Styled.LinkOpenMenu
+                  href="#skills-section"
+                  onClick={handleLinkClick}
+                >
+                  {"<Skills />"}
+                </Styled.LinkOpenMenu>
+              </Styled.MenuItem>
+            </Styled.MenuList>
+          </Styled.MenuItens>
+        </Styled.SlidingBackground>
         <Styled.Text
           isVisible={isVisible}
           opacityNumber="1s"

@@ -280,3 +280,58 @@ export const ImageConfig = styled.img<ImageProps>`
   background-color: ${({ backgroundColor }) => backgroundColor || ""};
   opacity: ${({ opacity }) => opacity || ""};
 `;
+
+export const SlidingBackground = styled.div<{ isVisible: boolean }>`
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: #11111b;
+  transform: ${({ isVisible }) =>
+    isVisible ? "translateX(-100%)" : "translateX(0)"};
+  transition: transform 0.5s ease-in-out;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const MenuItens = styled.div`
+  height: 80%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+`;
+
+type props = {
+  width?: string;
+  display?: string;
+  alignItems?: string;
+  justifyContent?: string;
+  gap?: string;
+  flexDirection?: string;
+};
+
+export const MenuList = styled.ul<props>`
+  display: ${({ display }) => display || ""};
+  align-items: ${({ alignItems }) => alignItems || ""};
+  justify-content: ${({ justifyContent }) => justifyContent || ""};
+  width: ${({ width }) => width || ""};
+  gap: ${({ gap }) => gap || ""};
+  flex-direction: ${({ flexDirection }) => flexDirection || ""};
+`;
+
+export const MenuItem = styled.li`
+  list-style: none;
+  margin-right: 2rem;
+`;
+
+export const LinkOpenMenu = styled.a`
+  text-decoration: none;
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.2rem;
+`;
